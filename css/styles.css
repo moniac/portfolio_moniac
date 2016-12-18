@@ -3,62 +3,144 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
 body {
-  background-color: #2B2B2B;
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: #2B2B2B;
 }
 
 header {
-  height: 2.5rem;
-  background: #0C4A72;
+    height: 2.5rem;
+    background: #0C4A72;
+position: fixed;
+z-index: 1;
+width: 100%;
 }
 
-header a:first-child > img:first-child {
-  position: absolute;
-  top: 0.1em;
-  left: .4em;
-max-width: 2.5em;
+header a:first-child>img:first-child {
+    position: absolute;
+    top: 0.1em;
+    left: .4em;
+    max-width: 2.5em;
+}
+
+main {
+    max-width: 26em;
+    margin: 0 auto;
+    /*padding-top: 20em;*/
+		padding-top: 8em;
+}
+
+main > section > ul {
+	display: flex;
+	flex-direction: column;
+	 flex-wrap: wrap;
+}
+
+main>section>ul>li>section {
+    background-color: #FFF;
+    border-radius: .5em;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    height: 12em;
+margin: .5em .8em .5em .8em;
+}
+
+main > section > ul> li:nth-of-type(1) > section > figure {
+	height: 3em;
+	background: #84E0DD;
+	border-radius: 3px 3px 0 0;
+	width:100%;
+	position: relative;
+}
+
+main > section > ul> li:nth-of-type(1) > section > figure > img {
+	position: absolute;
+	height: 1.5em;
+right: 1em;
+bottom: 0em;
+}
+
+main > section > ul> li:nth-of-type(2) > section > figure {
+    height: 3em;
+    background: #3264BD;
+    border-radius: 3px 3px 0 0;
+		position: relative;
+}
+
+main > section > ul> li:nth-of-type(2) > section > figure > img {
+	position: absolute;
+	height: 1.5em;
+right: 1em;
+bottom: .2em;
+}
+
+main > section > ul> li:nth-of-type(3) > section > figure {
+    height: 3em;
+    background: #232323;
+    border-radius: 3px 3px 0 0;
+		position: relative;
+}
+
+main > section > ul> li:nth-of-type(3) > section > figure > img {
+	position: absolute;
+	height: 1.8em;
+right: 1em;
+bottom: .6em;
+}
+
+@media (min-width: 700px) {
+
+main > section> ul {
+	flex-direction: row;
+}
+
+main {
+	max-width: 100%;
+}
+
+li {
+	width: 33%;
+}
+
+/*main>section>ul>li:last-of-type {
+	flex: 1 1;
+
+}*/
+
 }
