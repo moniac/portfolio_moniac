@@ -41,6 +41,7 @@ table {
     border-spacing: 0;
 }
 
+
 body {
     background-color: #2B2B2B;
 }
@@ -79,6 +80,28 @@ main>section>ul>li>section {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
     height: 12em;
 margin: .5em .8em .5em .8em;
+position: relative;
+}
+
+main > section > ul > li > section > button {
+  background: #84E0DD;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  width: 6em;
+  height: 3em;
+}
+
+main > section > ul > li > section > button > a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 1em 0em 1em 0em;
+  margin: -1em -0em -1em -0em;
+  color: #2A2A2A;
+  font-size: .91rem;
 }
 
 main > section > ul> li:nth-of-type(1) > section > figure {
@@ -124,7 +147,23 @@ right: 1em;
 bottom: .6em;
 }
 
-@media (min-width: 700px) {
+h2 {
+  font-family: 'open sans';
+  font-weight:700;
+  font-size: 1.4em;
+  color: #2A2A2A;
+  padding: .5em 0em 0em .8em;
+}
+
+main > section > ul > li > section > p {
+  font-family: 'roboto';
+  font-weight: 400;
+  font-size: 1rem;
+  padding: .8em 5% 0em 1.2em;
+line-height: 20px;
+}
+
+@media (min-width: 48em) {
 
 main > section> ul {
 	flex-direction: row;
@@ -132,10 +171,11 @@ main > section> ul {
 
 main {
 	max-width: 100%;
+  max-width: 45em;
 }
 
 li {
-	width: 33%;
+	width: 50%;
 }
 
 /*main>section>ul>li:last-of-type {
